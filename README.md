@@ -1,5 +1,11 @@
 # CureBot
 
+### Brief Description of the Project
+
+This project is a Medical Chatbot powered by AI to provide users with instant answers to health-related queries. The chatbot uses a retrieval-based approach for question answering, integrating with a Pinecone vector store for document retrieval and the Groq API for generating human-like responses. It is designed to assist users by answering medical questions based on an extensive knowledge base, making it useful for healthcare professionals, patients, and individuals seeking reliable health information.
+
+The web application is built using Flask, Bootstrap, and jQuery for the frontend, allowing for a responsive, user-friendly interface. It aims to streamline information access, enhancing the healthcare experience with quick and accurate answers.
+
 
 ### Step-01.  Creation of Virtual Environment
            conda create -n mchatbot python=3.12.4 -y
