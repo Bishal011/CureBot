@@ -1,0 +1,90 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chatbot</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../static/charts.css"/>
+	</head>
+	
+	
+	<body>
+		<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">
+				<div class="col-md-8 col-xl-6 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="data:image/jpeg;base64,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" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>Medical Chatbot</span>
+									<p>Ask me anything!</p>
+								</div>
+							</div>
+						</div>
+						<div id="messageFormeight" class="card-body msg_card_body">
+							<!-- Chat messages will be appended here -->
+						</div>
+						<div class="card-footer">
+							<form id="messageArea" class="input-group">
+								<input type="text" id="text" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required/>
+								<div class="input-group-append">
+									<button type="submit" id="send" class="input-group-text send_btn">
+										<i class="fas fa-location-arrow"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			$(document).ready(function() {
+				$("#messageArea").on("submit", function(event) {
+					event.preventDefault();  // Prevent form submission
+		
+					const date = new Date();
+					const hour = date.getHours();
+					const minute = date.getMinutes();
+					const str_time = hour + ":" + minute;
+					var rawText = $("#text").val();
+		
+					// Append the user's message
+					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
+					$("#text").val("");  // Clear the input box
+					$("#messageFormeight").append(userHtml);  // Append user message to the chat
+		
+					// Send the user's message to the Flask backend using AJAX
+					$.ajax({
+						data: {
+							msg: rawText
+						},
+						type: "POST",
+						url: "/get",
+						success: function(response) {
+							// Ensure `response` is the text from the bot
+							const botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://www.prdistribution.com/spirit/uploads/pressreleases/2019/newsreleases/d83341deb75c4c4f6b113f27b1e42cd8-chatbot-florence-already-helps-thousands-of-patients-to-remember-their-medication.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + response.response + '<span class="msg_time">' + str_time + '</span></div></div>';
+							$("#messageFormeight").append($.parseHTML(botHtml));  // Append bot response to chat
+						},
+						error: function() {
+							const errorHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://www.prdistribution.com/spirit/uploads/pressreleases/2019/newsreleases/d83341deb75c4c4f6b113f27b1e42cd8-chatbot-florence-already-helps-thousands-of-patients-to-remember-their-medication.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">Sorry, something went wrong. Please try again later.<span class="msg_time">' + str_time + '</span></div></div>';
+							$("#messageFormeight").append($.parseHTML(errorHtml));  // Display error message
+						}
+					});
+				});
+			});
+		</script>
+		
+        
+    </body>
+</html>
